@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico" />
+    <meta name="application-name" content="Calmo Api Clima" />
+    <meta name="description" content=<%= description %> >
+    <meta name="author" content="Óscar Hernández">
+    <meta name="keywords" content="api, node, pokeapi">
+    <meta name="robots" content="no-index, no-follow" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title><%= title %></title>
+</head>
+<body >
+    <header class="flex flex-between flex-column">
+        <h1 class="title-app center flex flex-center"><%= heading %> <img src="assets/images/banner_calamo_pokedex.webp" width="134" height="75" alt="Icono de Calamo Pokedex" /></h1>
+        <span class="center description-app"><%= description %></span>
+    </header>
+    <main id="container-app" class="flex flex-column flex-center">
+        <header class="header-form flex flex-center">
+            <picture class="container-logo-pokemon"  class="flex flex-center">
+                <source srcset="assets/images/logo_pokemon.png"  alt="Logo de Pokemon" media="(min-width:800px)"/>
+                <img src="assets/images/logo_pokemon.png"  alt="Logo de pokemon">
+            </picture>
+        </header>
+        <article>
+            <form id="form-api" class="flex flex-center flex-column w-full" >
+                <input style="color-scheme: dark" id="poke-search" class="w-full flex flex-center" type="search" name="pokemon" placeholder="Buscar pokemon" />
+                <button class="button">Buscar</button>
+            </form>
+            <aside class="data-poke">
+                <h2 id="heading-poke-data" class="center"></h2>
+                <picture id="container-icon-data" class="flex flex-center">
+                    <img class="image-pokemon"  class="hidden"/>
+                </picture>
+                <div aria-label="Descripción del pokémon" id="container-description-poke"></div>
+            </aside>
+        </article>
+        <footer class="flex flex-center w-full">
+            <span class="w-full center">
+                <a href="https://pokeapi.co/"
+                    rel="noreferer noopener"
+                    aria-label="Link a la web de OpenWeather"
+                    target="_blank"
+                >
+                    Información obtenida de &copy;Poke</a>
+            </span>
+        </footer>
+    </main>
+    <footer id="site-footer" aria-label="App Footer" class="flex flex-center w-full">
+        <span class="center">&copy<%= year %> <% company %></span>
+    </footer>
+</body>
+<script defer type="module" src="assets/js/poke_functions.js"></script>
+<script defer type="module" src="assets/js/main.js"></script>
+
+</html>

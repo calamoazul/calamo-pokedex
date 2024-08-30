@@ -1,0 +1,82 @@
+
+
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --primary-color: #2e62a6;
+        --primary--light-color: rgb(59, 123, 206);
+        --accent-color: rgb(171, 190, 189);
+        --accent-light-color: rgba(51, 166, 155, 0.685);
+        --yellow-color: #ffcc01;
+        --orange-color: rgb(242, 82, 46);
+        --red-color: #e3350d;
+        --black-color: #181818;
+        --secondary-black-color: #363636;
+        --white-color: #f8f8f8;
+        --secondary-white-color: #e8e8f9;
+        --gradient-background: linear-gradient(45deg, rgb(57 167 156), rgb(55 140 133));
+        --gradient-red: linear-gradient(45deg, var(--red-color), var(--orange-color));
+        --gradient-white: linear-gradient(45deg, var(--white-color), var(--secondary-white-color));
+        --gradient-blue: linear-gradient(45deg, var(--primary-color), var(--primary--light-color));
+        --gradient-black: linear-gradient(45deg, var(--black-color), var(--secondary-black-color));
+        --primary-font: Poppins, 'sans-serif';
+    }
+    body {
+        color-scheme: dark;
+        background-color: #fff;
+    }
+    h1,h2,h3,h4 {
+        color: var(--primary-color);
+    }
+    button {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+    }
+
+    body > header:first-of-type {
+        background: var(--gradient-white);
+        filter: drop-shadow(-10px 5px 15px var(--black-color));
+    }
+    
+    body >header:first-of-type > span.description-app {
+        color: var(--white-color);
+        background: var(--gradient-blue);
+    }
+    footer#site-footer {
+        background: var(--gradient-blue);
+        color: var(--white-color);
+    }
+
+    main#container-app {
+        background: var(--red-color);
+    }
+    main#container-app > header {
+        background-color: var(--white-color);
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:target {
+        background-color: var(--black-color);
+        color: var(--white-color);
+    }
+    main#container-app > article > form > input,
+    main#container-app > article > form > input[type="search"] {
+        height: 40px;
+        background-color: var(--black-color);
+        color: var(--white-color);
+        padding: 5px 12px;
+        border-radius: 5px;
+        outline: solid 10px var(--white-color);
+
+    }
+
+    main#container-app > article > form > input:focus,
+    main#container-app > article > form > input:hover,
+    main#container-app > article > form > input:target,
+    main#container-app > article > form > input:active
+    main#container-app > article > form > input:internal-autofill-selected
+    main#container-app > article > form > input:-internal-autofill-selected {
+        outline: solid 10px var(--white-color);
+        background-color: var(--black-color);
+    }
+}

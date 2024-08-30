@@ -1,0 +1,61 @@
+
+
+@media (prefers-colors-scheme: light){
+    body {
+        background: var(--gradient-background);
+    }
+    h1,h2,h3,h4 {
+        color: var(--primary-color);
+    }
+    button {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+    }
+
+    body > header:first-of-type {
+        background: var(--gradient-white);
+        filter: drop-shadow(-10px 5px 15px var(--black-color));
+    }
+    
+    body >header:first-of-type > span.description-app {
+        color: var(--white-color);
+        background: var(--gradient-blue);
+    }
+    footer#site-footer {
+        background: var(--gradient-blue);
+        color: var(--white-color);
+    }
+
+    main#container-app {
+        background: var(--red-color);
+    }
+    main#container-app > header {
+        background-color: var(--white-color);
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:target {
+        background-color: var(--black-color);
+        color: var(--white-color);
+    }
+    main#container-app > article > form > input,
+    main#container-app > article > form > input[type="search"] {
+        height: 40px;
+        background-color: var(--black-color);
+        color: var(--white-color);
+        padding: 5px 12px;
+        border-radius: 5px;
+        outline: solid 10px var(--white-color);
+
+    }
+
+    main#container-app > article > form > input:focus,
+    main#container-app > article > form > input:hover,
+    main#container-app > article > form > input:target,
+    main#container-app > article > form > input:active
+    main#container-app > article > form > input:internal-autofill-selected
+    main#container-app > article > form > input:-internal-autofill-selected {
+        outline: solid 10px var(--white-color);
+        background-color: var(--black-color);
+    }
+}
