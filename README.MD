@@ -1,8 +1,7 @@
 # CÁLAMO POKEDEX
 
-![Logo Pokemon](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1920px-International_Pok%C3%A9mon_logo.svg.png){width=50%}
 
-![Logo Calamo Pokedex](./public/images/banner_calamo_pokedex.webp){width=50%}
+![Logo Calamo Pokedex](./public/images/logo_calamo_pokedex.webp)
 App realizada con Node y express a partir de la PokeApi para simular el funcionamiento de una Pokédex y realizar funciones añadidas como minijuegos de combates pokémon.
 
 ## Historial de versiones
