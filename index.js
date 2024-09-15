@@ -26,8 +26,9 @@ app.use('/assets', express.static(path.join(__dirname, 'public')));
 app.use('/', front);
 app.use('/pokemon', pokemons);
 
-app.listen(port, host, () => {
-    console.log('Api Poke running');
+app.listen(port, host, (req, res) => {
+    
+    console.log('Api Poke running en' + port +'y' + host );
 }) 
 
 export default app;

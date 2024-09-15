@@ -1,7 +1,6 @@
 import express from 'express';
 import usePokeController from '../controllers/PokeController.js';
 import Cookies from 'js-cookie';
-import passport from '../controllers/AuthController.js';
 
 const router = express.Router();
 const pokeController = usePokeController()
@@ -24,7 +23,7 @@ router.get('/description/:id', async (req, res) => {
     return res.send(response);
 });
 
-router.post('/:poke/:id', passport.authenticate('jwt', {session:false}), async (req, res, next) => {
+router.post('/:poke/:id', async (req, res, next) => {
     const auth = res.get('Authorization');
     if(!auth || auth.empty == 0){
         return res.sendStatus(401);
